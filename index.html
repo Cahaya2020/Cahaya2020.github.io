@@ -11,22 +11,47 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
+    line-height: 1.6;
 }
 
+/* HERO */
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
     background: linear-gradient(135deg, #020617, #0f172a);
 }
 
-h1 { font-size: 40px; margin-bottom: 10px; }
-.subtitle { color: #38bdf8; font-size: 18px; }
+h1 { font-size: 42px; margin-bottom: 10px; }
 
+.subtitle {
+    color: #38bdf8;
+    font-size: 18px;
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.cta a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #020617;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* NAV */
 nav {
     text-align: center;
     padding: 15px;
     background: #020617;
+    position: sticky;
+    top: 0;
 }
+
 nav a {
     color: #38bdf8;
     margin: 0 15px;
@@ -34,10 +59,11 @@ nav a {
     font-weight: bold;
 }
 
+/* SECTION */
 section {
     max-width: 1000px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 h2 {
@@ -45,13 +71,27 @@ h2 {
     padding-left: 10px;
 }
 
+/* CARD */
 .card {
     background: #020617;
     padding: 20px;
     margin-top: 20px;
     border-radius: 12px;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* SKILLS */
 .skills span {
     display: inline-block;
     background: #1e293b;
@@ -60,6 +100,7 @@ h2 {
     border-radius: 8px;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 30px;
@@ -72,13 +113,20 @@ footer {
 
 <header>
     <h1>Fakhrul Alam</h1>
-    <p class="subtitle">AI / CNN Developer | Software Engineer</p>
+    <p class="subtitle">
+        AI Engineer (Computer Vision) & Software Engineer specializing in real-world systems
+    </p>
+
+    <div class="cta">
+        <a href="mailto:fakhrulcodejava@gmail.com">Contact Me</a>
+        <a href="https://github.com/Cahaya2020" target="_blank">GitHub</a>
+    </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
-    <a href="#ai">AI / CNN Developer</a>
-    <a href="#se">Software Engineering</a>
+    <a href="#ai">AI</a>
+    <a href="#se">Software</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -87,9 +135,8 @@ footer {
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am an AI and Software Engineer specializing in deep learning and system development.
-        My core strength lies in building high-performance AI models (CNN, RNN, NLP/LLM) 
-        and implementing them into scalable software systems.
+        AI Engineer with strong expertise in Computer Vision and Software Engineering.
+        I build deep learning models (CNN, YOLO, NLP/LLM) and transform them into scalable, real-world applications.
     </p>
 </section>
 
@@ -97,23 +144,16 @@ footer {
     <h2>AI / CNN Developer</h2>
     <div class="card">
         <p>
-            Focused on developing and optimizing deep learning models for real-world applications.
-            Experienced in building models from Machine Learning to Deep Learning, including CNN (Computer Vision),
-            RNN, and NLP (LLM).
+            Specialized in developing high-performance deep learning models for real-world applications,
+            particularly in satellite imagery and environmental analysis.
         </p>
 
-        <p><b>Key Focus:</b></p>
         <ul>
-            <li>Design and training of CNN models for Computer Vision</li>
-            <li>Model performance optimization and tuning</li>
-            <li>Handling satellite imagery data</li>
-            <li>End-to-end AI pipeline development</li>
+            <li>CNN model design and training</li>
+            <li>Model optimization and tuning</li>
+            <li>Satellite image analysis</li>
+            <li>End-to-end AI pipeline</li>
         </ul>
-
-        <p><b>Thesis:</b></p>
-        <p>
-            Focused on CNN-based model for image analysis and pattern detection.
-        </p>
     </div>
 </section>
 
@@ -121,49 +161,36 @@ footer {
     <h2>Software Engineering</h2>
     <div class="card">
         <p>
-            I focus on building modern web applications with clean architecture, responsive design, 
-            and efficient backend systems to deliver reliable and scalable solutions.
+            Focused on building modern web applications with clean architecture and scalable backend systems.
         </p>
 
         <ul>
-            <li>Developing responsive and user-friendly web interfaces</li>
-            <li>Building backend services and REST APIs</li>
-            <li>Designing and managing data flow between frontend and backend</li>
-            <li>Implementing authentication and basic security features</li>
-            <li>Optimizing performance and ensuring maintainable code structure</li>
+            <li>Frontend & responsive UI development</li>
+            <li>Backend API development</li>
+            <li>Data flow & system integration</li>
+            <li>Performance optimization</li>
         </ul>
-
-        <p>
-            My work emphasizes clean code, usability, and system reliability, ensuring that applications 
-            are easy to use, maintain, and scale.
-        </p>
     </div>
 </section>
 
 <section id="experience">
-    <h2>Experience & Background</h2>
+    <h2>Experience</h2>
 
-    <div class="card">
-        <h3>🎓 Master Degree (Data Science)</h3>
-        <p>
-            Developed various models ranging from Machine Learning to Deep Learning (RNN, CNN, NLP/LLM).
-            Specialized in CNN for thesis research.
-        </p>
-    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Master Degree (Data Science)</h3>
+            <p>Built ML to DL models (RNN, CNN, NLP). Focused on CNN for thesis.</p>
+        </div>
 
-    <div class="card">
-        <h3>🧠 Bachelor Degree (Artificial Intelligence)</h3>
-        <p>
-            Focused on Artificial Intelligence using Fuzzy Logic methods.
-        </p>
-    </div>
+        <div class="card">
+            <h3>Bachelor (Artificial Intelligence)</h3>
+            <p>Focused on AI with Fuzzy Logic approach.</p>
+        </div>
 
-    <div class="card">
-        <h3>🛰️ Data Annotation Experience</h3>
-        <p>
-            Experienced in complex data annotation, including labeling Tropical Cyclones (TC)
-            from satellite imagery, requiring high precision and domain understanding.
-        </p>
+        <div class="card">
+            <h3>Data Annotation</h3>
+            <p>Experienced in complex labeling of Tropical Cyclones from satellite imagery.</p>
+        </div>
     </div>
 
 </section>
@@ -177,15 +204,12 @@ footer {
         <span>TensorFlow</span>
         <span>OpenCV</span>
         <span>CNN</span>
-        <span>RNN</span>
         <span>YOLO</span>
-        <span>Mask R-CNN</span>
         <span>Computer Vision</span>
-        <span>NLP / LLM</span>
+        <span>NLP</span>
         <span>FastAPI</span>
         <span>Git</span>
         <span>Figma</span>
-        <span>Excel</span>
         <span>Power BI</span>
     </div>
 
@@ -195,10 +219,11 @@ footer {
     <h2>Contact</h2>
     <p>Email: fakhrulcodejava@gmail.com</p>
     <p>GitHub: https://github.com/Cahaya2020</p>
+    <p>Available for remote work</p>
 </section>
 
 <footer>
-    <p>© 2026 Fakhrul Alam | AI Portfolio</p>
+    <p>© 2026 Fakhrul Alam</p>
 </footer>
 
 </body>
